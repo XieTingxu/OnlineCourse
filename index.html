@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html>
+
+<head id="Head1" runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <!-- 删除默认的苹果工具栏和菜单栏 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- 在web app应用下状态条（屏幕顶部条）的颜色 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <!-- 忽略数字自动识别为电话号码-->
+    <meta name="format-detection" content="telephone=no">
+    <!--控制缓存的失效日期 -->
+    <meta http-equiv="Expires" content="-1">
+    <!-- 禁止转码-->
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <!-- 禁止缓存访问页面-->
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta name="applicable-device" content="mobile">
+    <title>登录</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/css.css?20191210">
+    <script src="js/flexible100.js" type="text/javascript"></script>
+    <script src="js/vue.js"></script>
+    <style>
+        body,
+        html {
+            height: 100%;
+            background: #f8f8f8;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login">
+        <img src="images/logo.png" alt="" class="logo">
+        <form action="" class="form">
+            <div>学员姓名：<input type="text" v-model="number" class="long"></div>
+            <div>用户手机号：<input type="text" v-model="tel" class="long"></div>
+            <div>短信验证码：<input type="text" v-model="codeNum"> <span class="code" @click.once="getCode">发送短信验证码<i v-if="code">({{time}})</i></span>
+            </div>
+            <input type="button" value="登录" class="subBtn" @click="sub">
+        </form>
+    </div>
+
+    <script>
+        var vm = new Vue({
+            el: ".form",
+            data: {
+                number: "",
+                tel: "",
+                codeNum: "",
+                code: false,
+                time:60
+            },
+            methods: {
+                sub() {
+                    window.location.href="course.html"
+                },
+                getCode () {
+                    this.code = true
+                    var num = 60;
+                    var interval = setInterval(
+                        () => {
+                             num--
+                             this.time = num
+                             if(this.time == 0){
+                                 clearInterval(interval)
+                                 this.code = false
+                             }
+                        },1000)
+                }
+            },
+        })
+    </script>
+
+</body>
+
+</html>

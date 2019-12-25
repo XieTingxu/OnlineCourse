@@ -1,0 +1,48 @@
+@charset "utf-8";
+
+/* 登录页面 */
+.login,.selfCenter{width: 100%;height: 100%;display: flex;justify-content: center;align-items: center;flex-direction: column;background: #f8f8f8;}
+.login .logo{width: 4.05rem;height: 1.86rem;margin-bottom: 1rem;}
+.login .form {width: 6.27rem;height: 3.8rem;margin-bottom: 2rem;;}
+.login .form div{width: 100%;height: .56rem;border-radius: .2rem;background: #fff;border: 1px solid #eee;display: flex;align-items: center;justify-content: flex-start;box-sizing: border-box;padding-left: .25rem;font-size: .2rem;color: #c1c1c1;margin-bottom: .35rem;}
+.login .form div input{width: 2.7rem;color: #333;height: 100%;background: transparent;}
+.login .form .code{display:flex;justify-content: center;align-items: center; width: 1.92rem;height: .35rem;border-radius: .175rem;font-size: .18rem;color: #ffc000;border: 1px solid #ffc000;}
+.login .form .subBtn{width: 3.53rem;height: .69rem;border-radius: .345rem;background: #ffc000;color: #fff;font-size: .3rem;margin :0 auto;display:block;margin-top: .75rem;}
+.login .form .long{width:4.7rem;}
+
+/* 个人中心页面 */
+.selfCenter .head{width: 2.5rem;height: 2.5rem;border-radius: 50%;}
+.selfCenter .studentName{color:#666666;font-size: .34rem;font-weight: 600;padding: .4rem 0;}
+.selfCenter .logout{display: flex;justify-content: center;align-items: center;background: #ffc000;width: 3.53rem;height: .69rem;border-radius: .345rem;font-size: .3rem;color: #fff;margin: .7rem 0 2rem;}
+
+/* 底部导航 */
+.nav{width: 100%;height: 1rem;display: flex;justify-content: flex-start;position: fixed; bottom: 0;left: 0;background: #fff;box-shadow: 0 .02rem .1rem .02rem rgba(54, 54, 54, 0.1);}
+.nav li{width: 50%;height: 100%;display:flex;justify-content: center;align-items: center; font-size: .22rem;color: #666;}
+.nav li img{width: .35rem;height: .33rem;margin-right: .1rem;}
+.nav .thisActive{background: #ff5400;}
+.nav .thisActive span{color: #fff;}
+
+/* 课程页面 */
+.course,.course-Detail{width: 100%;height: 100%;background: #f8f8f8;}
+.course .courseList{width: 100%;height: calc(100% - 1rem);overflow-y: scroll;background: #f8f8f8;box-sizing: border-box;padding-top: .3rem;}
+.course .courseList li{width: 6.84rem;height: 1.78rem;border-radius: .2rem;background: #fff;box-shadow: .03rem .03rem .15rem .03rem rgba(54, 54, 54, 0.1), -.03rem -.03rem .15rem .03rem rgba(54, 54, 54, 0.1);margin: 0 auto;display: flex;justify-content: space-around;align-items: center;box-sizing: border-box;padding: 0 .15rem;margin-bottom: .25rem;}
+.course .courseList li .courseBG{width: 1.45rem;height: 1.19rem;border-radius: .2rem;position: relative;overflow: hidden;}
+.course .courseList li .courseBG img{display: block;width: 1.45rem;height: 1.19rem;}
+.course .courseList li .courseBG .lock{position: absolute;top:0;left: 0;z-index: 1;}
+.course .courseIntroduce{width: 4rem;margin-left: -.1rem;}
+.course .courseIntroduce .title{font-size: .24rem;color: #e89214;display: flex;align-items: center;}
+.course .courseIntroduce .titleColor{color: #f9be0c!important;}
+.course .courseIntroduce .title img{width: .42rem;height: .42rem;margin:0 .1rem .1rem 0;}
+.course .courseIntroduce  .courseNum,.course .courseIntroduce  .courseTitle{font-size: .28rem;color: #333;}
+.course .courseList li .toDetial{width: .34rem;height: .34rem;}
+
+/* 课程详情页面 */
+.course-Detail .videoBox{background: #fff;width: 100%;border-top: .05rem solid #f8f8f8;padding: .35rem 0 .83rem;}
+.course-Detail .videoTitle{font-size: .48rem;color: #000;text-align: center;}
+.course-Detail .videoIntroduce{font-size: .3rem;color: #313131;text-align: center;}
+.course-Detail .video{width: 6.84rem;height: 3.23rem;margin: .25rem auto 0;}
+.course-Detail .video video{width: 6.84rem;height: 3.2rem;}
+.course-Detail .video .videoBg{position: relative;z-index: 999999999999999999999;}
+.course-Detail .video .videoBg img{width: 6.84rem;height: 3.23rem;position: absolute;top: 0;left:0;display: block;}
+.course-Detail .video .videoBg .play{z-index: 10;}
+.course-Detail .nextCourse{width: 3.53rem;height: .69rem;border-radius: .345rem;background: #ffc000;font-size: .3rem;color: #fff;margin: 1.2rem auto 0;display: block;}
